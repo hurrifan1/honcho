@@ -10,7 +10,7 @@
 
 services:
   api:
-    name: honcho-api
+    container_name: honcho-api
     build:
       context: .
       dockerfile: Dockerfile
@@ -51,7 +51,7 @@ services:
       - larc-net
 
   deriver:
-    name: honcho-deriver
+    container_name: honcho-deriver
     build:
       context: .
       dockerfile: Dockerfile
@@ -79,7 +79,7 @@ services:
       - honcho-net
 
   database:
-    name: honcho-pg
+    container_name: honcho-pg
     image: pgvector/pgvector:pg15
     restart: unless-stopped
     #ports:
@@ -106,7 +106,7 @@ services:
       - honcho-net
 
   redis:
-    name: honcho-redis
+    container_name: honcho-redis
     image: redis:8.2
     restart: unless-stopped
     #ports:
