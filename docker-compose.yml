@@ -129,6 +129,7 @@ volumes:
 
 networks:
   honcho-net:
+    name: honcho-net
     driver: bridge
   larc-net:
     external: true
