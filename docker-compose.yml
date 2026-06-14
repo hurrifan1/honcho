@@ -43,8 +43,8 @@ services:
       - CACHE_URL=redis://redis:6379/0?suppress=true
       - CACHE_ENABLED=true
     env_file:
-      - path: .env
-        required: false
+      - path: stack.env
+        required: true
     restart: unless-stopped
     networks:
       - honcho-net
